@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ML_Containerization</title>
+</head>
+<body>
+
+	<header>
+		<div class="container">
+			<div id="brandname">
+				<h2 align="center">BERT Sentiment Analysis & Docker Containerization</h2>
+			</div>
+			<hr/>
+			<br/>
+		<h2 align="center">Twitter Sentiment Analysis</h2>
+		</div>
+	</header>
+
+	<div class="ml-container" align="center">
+
+		<form action="/predict" method="POST">
+		<!-- <input type="text" name="comment"/> -->
+		<!-- <div style = "position:relative; left:-175px; top:62px;"> -->
+		<p>Enter Your Message Here</p>
+		<textarea name="message" rows="4" cols="40"></textarea>
+		<!-- </div> -->
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<input type="submit" class="btn-info" value="predict">
+		
+	</form>
+		
+	</div>
+
+	<style>
+		body {
+		  background-image: url('https://www.nclouds.com/blog/wp-content/uploads/2018/10/reduce_docker_image_size_by_45.jpg');
+		  background-repeat: no-repeat;
+		  background-attachment: fixed;
+		  background-size: 100% 100%;
+		  background-position: 0px 0px;
+		}
+	</style>
+
+</body>
+</html>
