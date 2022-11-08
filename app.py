@@ -70,14 +70,14 @@ if __name__ == '__main__':
 
     print("Device Selected :",device)
 
-    with open(PATH, 'rb') as f:
-        buffer = io.BytesIO(f.read())
-        tokenizer, bert_sentiment_model = torch.load(buffer,map_location=device)
+    # with open(PATH, 'rb') as f:
+    #     buffer = io.BytesIO(f.read())
+    #     tokenizer, bert_sentiment_model = torch.load(buffer,map_location=device)
 
     # torch.load(PATH, map_location=device)
 	##load vectorizer and model
-    # with open(PATH, 'rb') as f:
-    #     tokenizer, bert_sentiment_model = CPU_Unpickler(f).load()
+    with open(PATH, 'rb') as f:
+        tokenizer, bert_sentiment_model = CPU_Unpickler(f).load()
 
 
     print("Tokenizer : ",tokenizer)
