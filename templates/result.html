@@ -6,24 +6,22 @@
 <body>
 
 	<header>
-		<div class="container">
-			<div id="brandname">
-				<h3 align="center">Sentiment Analysis Result</h3>
-			</div>
-		<hr/>
-		<br/>
-		</div>
+			<h1 align="center" style="font-family: monospace">Sentiment Analysis Prediction</h2>
 	</header>
 
-	<p style="color:blue;font-size:20;text-align: center;"><b>Sentiment</b></p>
 	<div class="results" align="center">
 		
-		{% if prediction == 1%}
+		<h2 style="color:rgb(63, 36, 50);">Message : {{prediction.Message}}</h2>
+		{% if prediction.Sentiment == "NEGATIVE"%}
 		<h2 style="color:red;">Negative</h2>
-		{% elif prediction == 0%}
-		<h2 style="color:blue;">Positive</h2>
+		{% elif prediction.Sentiment == "POSITIVE"%}
+		<h2 style="color:rgb(10, 104, 0);">Positive</h2>
+		{% elif prediction.Sentiment == "NEUTRAL"%}
+		<h2 style="color:rgb(255, 200, 0);">Neutral</h2>
+		{% elif prediction.Sentiment == "IRRELEVANT"%}
+		<h2 style="color:rgb(199, 1, 90);">Irrelevant</h2>
 		{% endif %}
-		
+		<h3 style="font-family: monospace">Confidence Score : {{prediction.Score}}</h3>
 		<a href="..">
 		<input type="submit" value="Go Back..">
 		</a>

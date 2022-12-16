@@ -7,23 +7,34 @@
         <div class="sub-title">
             <h3 align="center">Twitter Sentiment Analysis</h3>
         </div>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="static/style.css">
     </head>
     <body>
         <div class="docker">
-            <form class="input-tweets">
-                <input type="text" value="Tweets" class="sub-input">
+            <form action="/predict" method="POST" class="input-tweets">
+                <input name="message" type="text" class="sub-input">
+                <div class="div-predict">
+                <input type="submit" class="btn-info" value="predict">
+                </div>
             </form>
-            <img src="images/logo.png" class="logo">
+            <img src="static/images/logo.png" class="logo">
             <div class="bubbles">
-                <img src="images/bubble.png">
-                <img src="images/bubble.png">
-                <img src="images/bubble.png">
-                <img src="images/bubble.png">
-                <img src="images/bubble.png">
-                <img src="images/bubble.png">
-                <img src="images/bubble.png">
+                <img src="static/images/bubble.png">
+                <img src="static/images/bubble.png">
+                <img src="static/images/bubble.png">
+                <img src="static/images/bubble.png">
+                <img src="static/images/bubble.png">
+                <img src="static/images/bubble.png">
+                <img src="static/images/bubble.png">
             </div>
         </div>
     </body>
 </html>
+
+<script>
+    function disableLogo()
+    {
+        spinner_box = document.getElementsByClassName("logo")
+        spinner_box.disabled = true
+    }
+</script>
